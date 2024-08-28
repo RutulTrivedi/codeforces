@@ -4,21 +4,21 @@ import java.util.Set;
 
 public class HorseshoeOnTheOtherHoof {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        int color1 = scanner.nextInt();
-        int color2 = scanner.nextInt();
-        int color3 = scanner.nextInt();
-        int color4 = scanner.nextInt();
-        
-        Set<Integer> uniqueColors = new HashSet<>();
-        uniqueColors.add(color1);
-        uniqueColors.add(color2);
-        uniqueColors.add(color3);
-        uniqueColors.add(color4);
-        
-        int neededColors = 4 - uniqueColors.size();
-        
-        System.out.println(neededColors);
+        try (Scanner sc = new Scanner(System.in)) {
+            int color1 = sc.nextInt();
+            int color2 = sc.nextInt();
+            int color3 = sc.nextInt();
+            int color4 = sc.nextInt();
+            
+            Set<Integer> uniqueColors = new HashSet<>();
+            uniqueColors.add(color1);
+            uniqueColors.add(color2);
+            uniqueColors.add(color3);
+            uniqueColors.add(color4);
+            
+            int neededColors = 4 - uniqueColors.size();
+            
+            System.out.println(neededColors);
+        }
     }
 }
